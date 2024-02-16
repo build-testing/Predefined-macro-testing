@@ -56,8 +56,10 @@ int main()
 
 	exampleFunction();
 
+	printf("%d\n", _INTEGRAL_MAX_BITS);
 	return 0;
 }
+
 
 
 
