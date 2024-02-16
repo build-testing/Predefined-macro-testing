@@ -19,6 +19,20 @@ public:
 	int GetID(void) { return m_nID; }
 };
 
+// Demonstrates functionality of __FUNCTION__, __FUNCDNAME__, and __FUNCSIG__ macros
+void exampleFunction()
+{
+	printf("Function name: %s\n", __FUNCTION__);
+	printf("Decorated function name: %s\n", __FUNCDNAME__);
+	printf("Function signature: %s\n", __FUNCSIG__);
+
+	// Sample Output
+	// -------------------------------------------------
+	// Function name: exampleFunction
+	// Decorated function name: ?exampleFunction@@YAXXZ
+	// Function signature: void __cdecl exampleFunction(void)
+}
+
 int main()
 {
 	// __COUNTER__ is initially defined as 0
@@ -39,6 +53,8 @@ int main()
 	// e1 ID: 0
 	// e2 ID: 1
 	// e3 ID: 2
+
+	exampleFunction();
 
 	return 0;
 }
